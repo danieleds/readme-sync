@@ -167,7 +167,7 @@ class Page {
 
     var data = JSON.stringify({
       title: this.title.replace(/(\r\n|\n|\r)/gm, "").replace(/ /g, ""),
-      excerpt: this.excerpt.replace(/(\r\n|\n|\r)/gm, "").replace(/ /g, ""),
+      excerpt: this.excerpt?.replace(/(\r\n|\n|\r)/gm, "")?.replace(/ /g, ""),
       order: this.order,
       hidden: this.hidden,
       next: this.headers.next,

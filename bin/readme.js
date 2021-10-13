@@ -452,8 +452,8 @@ function loadConfigYaml() {
   try {
     return yaml.safeLoad(fs.readFileSync(configFile, "utf8"));
   } catch (e) {
-    console.error(e);
-    process.exit(1);
+    console.error("No config file found, using default empty one.");
+    return { filters: [] }
   }
 }
 
