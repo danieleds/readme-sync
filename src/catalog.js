@@ -181,6 +181,7 @@ class Page {
     const frontMatter = {
       title: this.title,
       excerpt: this.excerpt,
+      order: this.order,
     };
     if (this.hidden) {
       frontMatter["hidden"] = true;
